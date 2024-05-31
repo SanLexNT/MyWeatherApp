@@ -19,5 +19,8 @@ data class CurrentResponse(
     var wind: Wind? = null,
     @SerializedName("name")
     @Expose
-    var name: String? = null
+    var name: String? = null,
+    @SerializedName("rain")
+    @Expose
+    var rain: Rain? = null
 )

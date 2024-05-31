@@ -7,7 +7,7 @@
     android:id="@+id/main"
     android:padding="@dimen/default_dimen"
     android:background="@color/day_color"
-    tools:context=".screens.city.MainActivity">
+    tools:context=".screens.weather.WeatherActivity">
 
     <ImageView
         android:layout_width="wrap_content"
@@ -25,6 +25,7 @@
         tools:text="Москва"
         app:layout_constraintTop_toBottomOf="@id/imageViewSearch"
         app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
         android:layout_marginTop="32dp"
         android:textColor="@color/white"
         android:textSize="32sp"
@@ -37,6 +38,7 @@
         tools:text="31 мая"
         app:layout_constraintTop_toBottomOf="@id/textViewCity"
         app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
         android:textColor="@color/white"
         android:textSize="18sp"/>
 
@@ -48,7 +50,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         android:orientation="horizontal"
-        android:layout_marginTop="50dp"
+        android:layout_marginTop="20dp"
         android:gravity="center">
 
         <ImageView
@@ -244,5 +246,21 @@
         </androidx.constraintlayout.widget.ConstraintLayout>
 
     </com.google.android.material.card.MaterialCardView>
+
+    <com.google.android.material.button.MaterialButton
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/buttonForecast"
+        android:text="@string/button_forecast"
+        android:textSize="22sp"
+        android:textColor="#B4000000"
+        android:padding="@dimen/small_dimen"
+        android:backgroundTint="#65FFFFFF"
+        app:cornerRadius="@dimen/default_dimen"
+        app:layout_constraintTop_toBottomOf="@id/itemHumidity"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>

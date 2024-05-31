@@ -1,4 +1,4 @@
-package com.example.myweatherapp.screens.weather
+package com.example.myweatherapp.screens.forecast
 
 import android.os.Bundle
 import androidx.activity.enableEdgeToEdge
@@ -7,10 +7,10 @@ import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
 import com.example.myweatherapp.R
 
-class MainActivity : AppCompatActivity() {
+class ForecastActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_main)
+        setContentView(R.layout.activity_forecast)
 
     }
 }

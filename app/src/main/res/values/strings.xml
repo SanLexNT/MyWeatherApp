@@ -1,3 +1,22 @@
 <resources>
     <string name="app_name">My Weather App</string>
+    <string name="search_description">Change city</string>
+    <string name="weather_icon">weather icon</string>
+    <string name="rainfall">Осадки</string>
+    <string name="wind">Скорость ветра</string>
+    <string name="humidity">Влажность</string>
+    <string name="default_city">Москва</string>
+    <string name="button_forecast">Прогноз на 7 дней</string>
+
+    <string-array name="conditions">
+        <item>Clear sky</item>
+        <item>Few clouds</item>
+        <item>Scattered clouds</item>
+        <item>Broken clouds</item>
+        <item>Shower rain</item>
+        <item>Rain</item>
+        <item>Thunderstorm</item>
+        <item>Snow</item>
+        <item>Mist</item>
+    </string-array>
 </resources>
