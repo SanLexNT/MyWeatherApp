@@ -21,7 +21,7 @@
             android:name=".screens.weather.WeatherActivity"
             android:exported="false" />
         <activity
-            android:name=".screens.city.MainActivity"
+            android:name=".screens.main.MainActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

@@ -17,10 +17,14 @@ data class CurrentResponse(
     @SerializedName("wind")
     @Expose
     var wind: Wind? = null,
-    @SerializedName("name")
-    @Expose
-    var name: String? = null,
     @SerializedName("rain")
     @Expose
-    var rain: Rain? = null
+    var rain: Rain? = null,
+    @SerializedName("clouds")
+    @Expose
+    var clouds: Clouds? = null,
+    @SerializedName("name")
+    @Expose
+    var name: String? = null
+
 )

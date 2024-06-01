@@ -9,7 +9,8 @@ import retrofit2.http.Query
 
 interface ApiService {
     @GET("weather?units=metric&lang=ru")
-    fun getCurrentWeather(@Query("q") city: String, @Query("appid") apiKey: String = API_KEY) : Single<CurrentResponse>
+    fun getCurrentWeather(@Query("q") city: String, @Query("appid") apiKey: String = API_KEY)
+        : Single<CurrentResponse>
 
     @GET("forecast/daily?")
     fun getForecast(@Query("q") city: String, @Query("cnt") days: Int = 7,
