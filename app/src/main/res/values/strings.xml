@@ -1,3 +1,27 @@
 <resources>
     <string name="app_name">My Weather App</string>
+    <string name="search_description">Изменить город</string>
+    <string name="weather_icon">Иконка погоды</string>
+    <string name="rainfall">Осадки</string>
+    <string name="wind">Скорость ветра</string>
+    <string name="humidity">Влажность</string>
+    <string name="default_city">Москва</string>
+    <string name="button_forecast">Прогноз на 7 дней</string>
+    <string name="clouds">Облачность</string>
+    <string name="enter_city_hint">Название города</string>
+    <string name="enter_city_title">Введите город</string>
+    <string name="necessary_field_warning">Обязательное поле</string>
+    <string name="cancel_button">Отмена</string>
+
+    <string-array name="conditions">
+        <item>Ясно</item>
+        <item>Малооблачно</item>
+        <item>Облачно</item>
+        <item>Тучи</item>
+        <item>Ливень</item>
+        <item>Дождь</item>
+        <item>Гроза</item>
+        <item>Снег</item>
+        <item>Туман</item>
+    </string-array>
 </resources>

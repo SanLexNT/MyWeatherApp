@@ -1,12 +1,10 @@
 package com.example.myweatherapp.pojo.current
+
 import com.google.gson.annotations.Expose
 import com.google.gson.annotations.SerializedName
 
-data class Wind(
-    @SerializedName("speed")
+data class Rain(
+    @SerializedName("1h")
     @Expose
-    var speed: Double? = null,
-    @SerializedName("deg")
-    @Expose
-    var deg: Int? = null
+    var sizeRain: Double? = null
 )
