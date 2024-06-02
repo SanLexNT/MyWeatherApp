@@ -1,6 +1,7 @@
 package com.example.myweatherapp.pojo.current
 
 import com.example.myweatherapp.pojo.Coord
+import com.example.myweatherapp.pojo.Main
 import com.example.myweatherapp.pojo.Weather
 import com.google.gson.annotations.Expose
 import com.google.gson.annotations.SerializedName

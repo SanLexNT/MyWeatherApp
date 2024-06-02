@@ -15,7 +15,6 @@ import com.example.myweatherapp.pojo.current.CurrentResponse
 import com.example.myweatherapp.screens.forecast.ForecastActivity
 import com.google.android.material.dialog.MaterialAlertDialogBuilder
 import com.google.android.material.textfield.TextInputEditText
-import com.google.android.material.textfield.TextInputLayout
 import com.squareup.picasso.Picasso
 import kotlinx.coroutines.launch
 import java.sql.Date
@@ -28,6 +27,7 @@ class MainActivity : AppCompatActivity() {
     private lateinit var city: String
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+        supportActionBar?.hide()
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
         viewModel = ViewModelProvider(this)[MainViewModel::class.java]
@@ -49,6 +49,7 @@ class MainActivity : AppCompatActivity() {
         }
     }
 
+    @SuppressLint("SetTextI18n")
     private fun setupUI(currentResponse: CurrentResponse) {
         Log.d("MyTag", currentResponse.toString())
         binding.apply {
@@ -64,7 +65,7 @@ class MainActivity : AppCompatActivity() {
             textViewWindSpeed.text = currentResponse.wind?.speed.toString() + " м/с"
             textViewHumidity.text = currentResponse.main?.humidity.toString() + " %"
             textViewClouds.text = currentResponse.clouds?.all.toString() + " %"
-            textViewRainfall.text = rainfall.toString() + " мм"
+            textViewRainfall.text = "$rainfall мм"
             setWeatherIcon(currentResponse.weather?.get(0)?.icon)
             imageViewSearch.setOnClickListener {
                 val view = LayoutInflater.from(this@MainActivity)

@@ -2,7 +2,6 @@ package com.example.myweatherapp.api
 
 import com.example.myweatherapp.pojo.current.CurrentResponse
 import com.example.myweatherapp.pojo.forecast.ForecastResponse
-import io.reactivex.rxjava3.core.Observable
 import io.reactivex.rxjava3.core.Single
 import retrofit2.http.GET
 import retrofit2.http.Query
@@ -12,8 +11,8 @@ interface ApiService {
     fun getCurrentWeather(@Query("q") city: String, @Query("appid") apiKey: String = API_KEY)
         : Single<CurrentResponse>
 
-    @GET("forecast/daily?")
-    fun getForecast(@Query("q") city: String, @Query("cnt") days: Int = 7,
+    @GET("forecast?units=metric&lang=ru")
+    fun getForecast(@Query("q") city: String,
                     @Query("appid") apiKey: String = API_KEY) : Single<ForecastResponse>
 
     companion object{
