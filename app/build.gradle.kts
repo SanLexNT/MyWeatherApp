@@ -9,7 +9,7 @@ android {
 
     defaultConfig {
         applicationId = "com.example.myweatherapp"
-        minSdk = 24
+        minSdk = 26
         targetSdk = 34
         versionCode = 1
         versionName = "1.0"
@@ -33,13 +33,13 @@ android {
 }
 
 dependencies {
-    implementation ("com.google.code.gson:gson:2.8.7")
-    implementation ("com.squareup.retrofit2:retrofit:2.9.0")
-    implementation ("com.squareup.retrofit2:converter-gson:2.9.0")
-    implementation("com.squareup.retrofit2:adapter-rxjava3:2.11.0")
-    implementation ("io.reactivex.rxjava3:rxandroid:3.0.2")
-    implementation ("io.reactivex.rxjava3:rxjava:3.1.5")
-    implementation ("com.squareup.picasso:picasso:2.8")
+    implementation (libs.gson)
+    implementation (libs.retrofit)
+    implementation (libs.converter.gson)
+    implementation(libs.adapter.rxjava3)
+    implementation (libs.rxandroid)
+    implementation (libs.rxjava)
+    implementation (libs.picasso)
 
     implementation(libs.androidx.core.ktx)
     implementation(libs.androidx.appcompat)

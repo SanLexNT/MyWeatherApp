@@ -3,7 +3,7 @@
     <string name="search_description">Изменить город</string>
     <string name="weather_icon">Иконка погоды</string>
     <string name="rainfall">Осадки</string>
-    <string name="wind">Скорость ветра</string>
+    <string name="wind">Ветер</string>
     <string name="humidity">Влажность</string>
     <string name="default_city">Москва</string>
     <string name="button_forecast">Прогноз на 7 дней</string>
@@ -12,6 +12,7 @@
     <string name="enter_city_title">Введите город</string>
     <string name="necessary_field_warning">Обязательное поле</string>
     <string name="cancel_button">Отмена</string>
+    <string name="detail_forecast">Подробный прогноз</string>
 
     <string-array name="conditions">
         <item>Ясно</item>
