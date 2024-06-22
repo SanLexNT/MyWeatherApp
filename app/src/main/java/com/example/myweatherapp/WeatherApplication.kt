@@ -5,6 +5,6 @@ import com.example.myweatherapp.di.DaggerWeatherComponent
 
 class WeatherApplication : Application() {
     val component by lazy {
-        DaggerWeatherComponent.create()
+        DaggerWeatherComponent.factory().create(this)
     }
 }
