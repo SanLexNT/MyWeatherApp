@@ -1,6 +1,7 @@
 plugins {
     alias(libs.plugins.android.application)
     alias(libs.plugins.jetbrains.kotlin.android)
+    id("kotlin-kapt")
 }
 
 android {
@@ -33,13 +34,16 @@ android {
 }
 
 dependencies {
-    implementation (libs.gson)
     implementation (libs.retrofit)
+    implementation (libs.dagger)
+    kapt (libs.dagger.compiler)
+    implementation (libs.gson)
     implementation (libs.converter.gson)
     implementation(libs.adapter.rxjava3)
     implementation (libs.rxandroid)
     implementation (libs.rxjava)
     implementation (libs.picasso)
+    implementation (libs.androidx.lifecycle.viewmodel.ktx)
 
     implementation(libs.androidx.core.ktx)
     implementation(libs.androidx.appcompat)
