@@ -3,6 +3,7 @@ package com.example.myweatherapp.presentation.currentWeather
 import android.annotation.SuppressLint
 import android.content.Context
 import android.content.DialogInterface
+import android.content.res.Configuration
 import android.os.Bundle
 import android.util.Log
 import android.view.LayoutInflater
@@ -89,10 +90,12 @@ class CurrentWeatherFragment : Fragment() {
             }
 
             imageViewIcon.setOnClickListener {
-                requireActivity().supportFragmentManager.beginTransaction()
-                    .replace(R.id.main_container, ForecastFragment.newInstance())
-                    .addToBackStack(null)
-                    .commit()
+                if(resources.configuration.orientation != Configuration.ORIENTATION_LANDSCAPE){
+                    requireActivity().supportFragmentManager.beginTransaction()
+                        .replace(R.id.main_container, ForecastFragment.newInstance())
+                        .addToBackStack(null)
+                        .commit()
+                }
             }
         }
     }
@@ -140,6 +143,7 @@ class CurrentWeatherFragment : Fragment() {
     }
 
     companion object{
+
         fun newInstance() : CurrentWeatherFragment {
             return CurrentWeatherFragment()
         }
